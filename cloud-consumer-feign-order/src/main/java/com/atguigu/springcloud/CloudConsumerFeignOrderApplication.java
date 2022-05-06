@@ -3,19 +3,17 @@ package com.atguigu.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * Author: linjianhai
- * Date: 2022/5/5 15:54
+ * Date: 2022/5/7 0:04
  */
-@EnableEurekaClient
 @SpringBootApplication
-@EnableDiscoveryClient
-public class CloudPaymentServiceApplication {
-
+//@EnableDiscoveryClient
+@EnableFeignClients
+public class CloudConsumerFeignOrderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CloudPaymentServiceApplication.class,args);
+        SpringApplication.run(CloudConsumerFeignOrderApplication.class,args);
     }
-
 }
